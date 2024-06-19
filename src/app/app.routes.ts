@@ -6,8 +6,12 @@ export const routes: Routes = [
     loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
   },
   {
+    path: 'player/:type',
+    loadComponent: () => import('./content-plyaer/content-player.component').then((m) => m.ContentPlayerComponent),
+  },
+  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'player',
     pathMatch: 'full',
   },
 ];
